@@ -1,0 +1,314 @@
+# Q-GAP: Quantum Enhanced Graph Attention PPO Framework for Virtual Network Embedding
+
+## Overview
+
+Q-GAP is a Quantum Enhanced Graph Attention Proximal Policy Optimization framework designed to solve the Virtual Network Embedding (VNE) problem in dynamic network virtualization environments.
+
+The framework integrates:
+
+1. Graph Attention Networks (GAT) for topology-aware substrate representation learning.
+2. Quantum Proximal Policy Optimization (Quantum-PPO) for enhanced exploration and decision making.
+3. Reinforcement Learning based resource allocation.
+4. Adaptive node and link embedding strategies.
+5. Revenue-aware optimization for efficient utilization of substrate resources.
+
+The objective is to maximize:
+
+* Virtual Network Request Acceptance Ratio (RAC)
+* Revenue-to-Cost Ratio (R2C)
+* Long-Term Average Revenue (LAR)
+* Resource Utilization Efficiency
+
+while minimizing embedding failures and resource fragmentation.
+
+---
+
+## Key Features
+
+* Graph Attention Network based substrate encoding
+* Quantum-enhanced policy network using PennyLane
+* PPO based reinforcement learning framework
+* Dynamic Virtual Network Embedding
+* Resource-aware node ranking
+* Revenue-aware reward function
+* Automatic metrics logging
+* CSV result generation
+* Experimental comparison with multiple baselines
+* Publication-ready performance figures
+
+---
+
+## Project Structure
+
+```text
+Q-GAP/
+│
+├── main.py
+├── config.py
+│
+├── environment/
+│   ├── substrate_network.py
+│   ├── vnr_generator.py
+│   ├── embedding_engine.py
+│   └── reward.py
+│
+├── models/
+│   ├── gat_encoder.py
+│   ├── quantum_policy.py
+│   ├── critic_network.py
+│   └── ppo_agent.py
+│
+├── training/
+│   └── trainer.py
+│
+├── utils/
+│   ├── graph_utils.py
+│   ├── metrics.py
+│   ├── logger.py
+│   └── plotting.py
+│
+├── results/
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/Q-GAP.git
+
+cd Q-GAP
+```
+
+---
+
+### Create Environment
+
+Using Conda:
+
+```bash
+conda create -n qgap python=3.10
+
+conda activate qgap
+```
+
+---
+
+### Install Dependencies
+
+```bash
+pip install torch
+
+pip install torch-geometric
+
+pip install networkx
+
+pip install matplotlib
+
+pip install pandas
+
+pip install numpy
+
+pip install pennylane
+```
+
+---
+
+## Requirements
+
+### Software
+
+* Python 3.10+
+* PyTorch
+* PyTorch Geometric
+* PennyLane
+* NetworkX
+* NumPy
+* Pandas
+* Matplotlib
+
+### Hardware
+
+Recommended:
+
+* Intel Core i7 or higher
+* 16 GB RAM
+* NVIDIA GPU with CUDA support
+
+Experiments reported in the paper were executed using CUDA-enabled GPU acceleration.
+
+---
+
+## Configuration
+
+All experiment parameters can be modified in:
+
+```text
+config.py
+```
+
+Example:
+
+```python
+SUBSTRATE_NODES = 80
+
+VNR_MIN_NODES = 2
+
+VNR_MAX_NODES = 6
+
+EPISODES = 5000
+
+LEARNING_RATE = 0.0003
+
+BASELINE = "Q-GAP"
+```
+
+Supported baselines:
+
+```python
+BASELINE = "PPO"
+
+BASELINE = "PPO+GAT"
+
+BASELINE = "Quantum-PPO"
+
+BASELINE = "DL-ViNE"
+
+BASELINE = "Q-GAP"
+```
+
+---
+
+## Running Experiments
+
+Run training:
+
+```bash
+python main.py
+```
+
+---
+
+## Evaluation Metrics
+
+The framework evaluates:
+
+### Request Acceptance Ratio (RAC)
+
+Percentage of Virtual Network Requests successfully embedded.
+
+### Revenue-to-Cost Ratio (R2C)
+
+Measures embedding efficiency.
+
+### Long-Term Average Revenue (LAR)
+
+Evaluates long-term profitability.
+
+### CPU Utilization
+
+Percentage of substrate CPU resources utilized.
+
+### Bandwidth Utilization
+
+Percentage of substrate bandwidth resources utilized.
+
+### Training Loss
+
+Actor and Critic optimization performance.
+
+### Policy Entropy
+
+Exploration behavior during learning.
+
+---
+
+## Experimental Results
+
+### Baseline Comparison
+
+| Method      | RAC (%) |
+| ----------- | ------- |
+| PPO         | 55.53   |
+| PPO+GAT     | 75.14   |
+| Quantum-PPO | 80.02   |
+| DL-ViNE     | 82.15   |
+| Q-GAP       | 87.31   |
+
+The proposed Q-GAP framework achieves the highest acceptance ratio among all evaluated methods.
+
+---
+
+## Generated Outputs
+
+The framework automatically generates:
+
+### CSV Files
+
+```text
+results/*.csv
+```
+
+### Figures
+
+```text
+Acceptance Ratio
+
+Average Reward
+
+Revenue-to-Cost Ratio
+
+Long-Term R2C
+
+Long-Term Average Revenue
+
+CPU Utilization
+
+Bandwidth Utilization
+
+Policy Entropy
+
+Training Loss
+```
+
+---
+
+## Reproducibility
+
+All experiments can be reproduced by:
+
+1. Installing required dependencies.
+2. Configuring parameters in config.py.
+3. Selecting a baseline.
+4. Running main.py.
+
+Random seeds may be fixed for deterministic results.
+
+---
+
+## Citation
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@article{QGAP2025,
+  title={Q-GAP: Quantum Enhanced Graph Attention PPO Framework for Virtual Network Embedding},
+  author={Qaisar Ali and Coauthors},
+  journal={Under Review},
+  year={2025}
+}
+```
+
+---
+
+## License
+
+This project is released for academic and research purposes.
+Please cite the corresponding publication when using this code.
+
+```
+```
