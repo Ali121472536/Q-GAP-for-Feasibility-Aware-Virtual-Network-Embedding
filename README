@@ -1,5 +1,4 @@
-# Q-GAP: Quantum Enhanced Graph Attention PPO Framework for Virtual Network Embedding
-
+# Quantum Graph Attention Policy for Feasibility-Aware Virtual Network Embedding in 6G Networks
 ## Overview
 
 Q-GAP is a Quantum Enhanced Graph Attention Proximal Policy Optimization framework designed to solve the Virtual Network Embedding (VNE) problem in dynamic network virtualization environments.
@@ -59,7 +58,9 @@ Q-GAP/
 │   └── ppo_agent.py
 │
 ├── training/
-│   └── trainer.py
+│   ├── trainer.py
+│   ├── evaluator.py
+│   └── replay_buffer.py
 │
 ├── utils/
 │   ├── graph_utils.py
@@ -68,11 +69,29 @@ Q-GAP/
 │   └── plotting.py
 │
 ├── results/
+│   ├── PPO_results.csv
+│   ├── PPO_GAT_results.csv
+│   ├── Quantum_PPO_results.csv
+│   ├── DL_ViNE_results.csv
+│   ├── Q_GAP_results.csv
+│   └── comparison_plots.py
 │
-└── README.md
+├── figures/
+│   ├── RAC_Comparison.png
+│   ├── Revenue_Comparison.png
+│   ├── R2C_Comparison.png
+│   ├── CPU_Comparison.png
+│   ├── BW_Comparison.png
+│   ├── Acceptance_Ratio.png
+│   ├── Average_Reward.png
+│   ├── Policy_Entropy.png
+│   └── Training_Loss.png
+│
+├
+├── README.md
+
 ```
 
----
 
 ## Installation
 
@@ -154,7 +173,6 @@ config.py
 Example:
 
 ```python
-SUBSTRATE_NODES = 80
 
 VNR_MIN_NODES = 2
 
@@ -225,23 +243,7 @@ Actor and Critic optimization performance.
 
 Exploration behavior during learning.
 
----
 
-## Experimental Results
-
-### Baseline Comparison
-
-| Method      | RAC (%) |
-| ----------- | ------- |
-| PPO         | 55.53   |
-| PPO+GAT     | 75.14   |
-| Quantum-PPO | 80.02   |
-| DL-ViNE     | 82.15   |
-| Q-GAP       | 87.31   |
-
-The proposed Q-GAP framework achieves the highest acceptance ratio among all evaluated methods.
-
----
 
 ## Generated Outputs
 
@@ -295,11 +297,7 @@ Random seeds may be fixed for deterministic results.
 If you use this repository in your research, please cite:
 
 ```bibtex
-@article{QGAP2025,
-  title={Q-GAP: Quantum Enhanced Graph Attention PPO Framework for Virtual Network Embedding},
-  author={Qaisar Ali and Coauthors},
-  journal={Under Review},
-  year={2025}
+Quantum Graph Attention Policy for Feasibility-Aware Virtual Network Embedding in 6G Networks
 }
 ```
 
